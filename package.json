@@ -1,0 +1,30 @@
+{
+  "name": "dc-es6",
+  "version": "1.0.0",
+  "description": "Drupalcon 2017 - Javascript ES6 presentation",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel-cli": "./node_modules/.bin/babel src --out-dir dist"
+  },
+  "author": "Ryan Hagerty",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-core": "^6.24.0",
+    "babel-preset-env": "^1.3.2",
+    "babel-preset-es2015": "^6.24.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.5.0"
+  },
+  "babel": {
+    "presets": [
+      ["env", {
+        "targets": {
+          "browsers": ["last 2 versions", "safari >= 7"]
+        }
+      }]
+    ]
+  }
+}
