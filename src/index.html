@@ -12,51 +12,21 @@
 
 <body class="site">
   <div class="container">
-    <h1>Destructuring</h1>
-    <pre class="code">
-      <code>// ES5
-/* var name1 = `Ryan`;
-var name2 = `Rye`;
-var name3 = `Ryerye`; */
-
-// ES6
-// Arrays
-/* const [ name1, name2, name3 ] = [ `Ryan`, `Rye`, `Ryerye` ];
-console.log(name1); */
-
-const names = [ `Ryan`, `Rye`, `Ryerye` ];
-const [name1, name2, name3] = names;
-console.log(name2);
-
-// Objects
-/* const superHero = {
-  alias: `Spider-man`,
-  name: `Peter Parker`
-};
-
-const { alias, name } = superHero;
-console.log(alias); */
-
-const superVillain = {
-  alias: `Sandman`,
-  name: `William Baker`,
-  weaknesses: {
-    weakness: `Water`,
-    weakness2: `Planning heists`
-  }
-}
-
-const { alias, weaknesses: { weakness } } = superVillain;
-console.log(alias, weakness);</code>
-    </pre>
-    <a class="button next" href="10-modules.html">Next</a>
-    <p class="source">Source file: <code>./src/javascript/09_destructuring.js</code>
+    <h1>JavaScript ES6 &ndash; The Best Vanilla You've Ever Tasted.</h1>
+    <h2>Requirements</h2>
+    <ol>
+      <li>Have npm installed</li>
+      <li>Type npm install</li>
+      <li>Type npm run start</li>
+      <li>Enjoy!</li>
+    </ol>
+    <a class="button" href="01-babel-cli.html">Next</a></p>
   </div>
   <footer>
     <div class="footer-content">
       <p class="header-small">Contents</p>
       <ol start="0">
-        <li><a href="index.html">Home</a></li>
+        <li>Home</li>
         <li><a href="01-babel-cli.html">Babel CLI</a></li>
         <li><a href="02-const-let.html">const / let</a></li>
         <li><a href="03-scope.html">scope</a></li>
@@ -65,7 +35,7 @@ console.log(alias, weakness);</code>
         <li><a href="06-promises.html">promises</a></li>
         <li><a href="07-classes.html">classes</a></li>
         <li><a href="08-template-literals.html">template literals</a></li>
-        <li>destructuring</li>
+        <li><a href="09-destructuring.html">destructuring</a></li>
         <li><a href="10-modules.html">modules</a></li>
       </ol>
       <div class="contact">
@@ -74,5 +44,4 @@ console.log(alias, weakness);</code>
     </div>
   </footer>
 </body>
-<script src="javascript/09_destructuring.js"></script>
 </html>

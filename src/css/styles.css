@@ -1,0 +1,59 @@
+.site {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+  margin: 0 auto;
+  padding: 30px;
+  max-width: 1180px;
+}
+
+.white {
+  color: #fff;
+}
+
+.white code {
+  color: #606c76;
+}
+
+pre.code {
+  margin: 0 0 30px;
+  padding: 0;
+}
+
+button {
+  margin-top: 30px;
+}
+
+.button {
+  display: block;
+  margin-top: 30px;
+  width: 129px;
+  margin-bottom: 40px;
+}
+
+.source {
+  margin-top: 30px;
+}
+
+.header-small {
+  font-size: 18px;
+}
+
+footer {
+  background: #f4f5f6;
+}
+
+.footer-content {
+  margin: 0 auto;
+  padding: 30px;
+  max-width: 1180px;
+}
+
+.contact {
+  text-align: right;
+}

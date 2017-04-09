@@ -2,15 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-
-  <title>Drupalcon 2017: Javascript ES6</title>
+  <title>Javascript ES6</title>
   <meta name="description" content="JS Session">
-  <!--<link rel="stylesheet" href="dist/css/styles.css?v=1.0">-->
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+  <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+  <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
-  <h1>Babel CLI with implicit returns</h1>
-  <p class="next"><a href="02-const-let.html">Next</a></p>
+<body class="site">
+  <div class="container">
+    <h1>Babel CLI with implicit returns</h1>
+    <p><strong>Note: For this example, type npm run babel-cli</strong></p>
+    <code>const implicitReturn = ((food) => 'I LOVE ' + food)('pizzaaaa!');</code>
+    <a class="button" href="02-const-let.html">Next</a>
+    <p class="source">Source file: <code>./src/javascript/01_babel_cli.js</code>
+  </div>
+  <footer>
+    <div class="footer-content">
+      <p class="header-small">Contents</p>
+      <ol start="0">
+        <li><a href="index.html">Home</a></li>
+        <li>Babel CLI</li>
+        <li><a href="02-const-let.html">const / let</a></li>
+        <li><a href="03-scope.html">scope</a></li>
+        <li><a href="04-default-rest.html">default / rest parameters</a></li>
+        <li><a href="05-arrow-functions.html">arrow functions</a></li>
+        <li><a href="06-promises.html">promises</a></li>
+        <li><a href="07-classes.html">classes</a></li>
+        <li><a href="08-template-literals.html">template literals</a></li>
+        <li><a href="09-destructuring.html">destructuring</a></li>
+        <li><a href="10-modules.html">modules</a></li>
+      </ol>
+      <div class="contact">
+        Contact: <a href="https://www.twitter.com/hotpizzas">hotpizzas</a>
+      </div>
+    </div>
+  </footer>
 </body>
 <script src="javascript/01_babel_cli.js"></script>
 </html>

@@ -2,15 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-
-  <title>Drupalcon 2017: Javascript ES6</title>
+  <title>Javascript ES6</title>
   <meta name="description" content="JS Session">
-  <!--<link rel="stylesheet" href="dist/css/styles.css?v=1.0">-->
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+  <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+  <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
-  <h1>Template Literals</h1>
-  <p class="next"><a href="09-destructuring.html">Next</a></p>
+<body class="site">
+  <div class="container">
+    <h1>Template Literals</h1>
+    <pre class="code">
+      <code>//ES5
+// var beverage = "BEER";
+// console.log("Time to go drink " + beverage + "!");
+
+//ES6
+const beverage = `BEER`;
+console.log(`Time to go drink ${beverage}!`);
+
+// Ternary in template literal
+const isPizza = true;
+const cheer = () => `
+  YEAAAAAA!
+`;
+
+const template = () => `
+  &lt;div&gt;
+    ${isPizza ? `${cheer()}` : `I'm so sad. :(`}
+  &lt;/div&gt;
+`;
+
+const nextLink = document.querySelector(`.next`);
+nextLink.insertAdjacentHTML(`afterend`, template());</code>
+    </pre>
+    <a class="button next" href="09-destructuring.html">Next</a>
+    <p class="source">Source file: <code>./src/javascript/08_template_literals.js</code>
+  </div>
+  <footer>
+    <div class="footer-content">
+      <p class="header-small">Contents</p>
+      <ol start="0">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="01-babel-cli.html">Babel CLI</a></li>
+        <li><a href="02-const-let.html">const / let</a></li>
+        <li><a href="03-scope.html">scope</a></li>
+        <li><a href="04-default-rest.html">default / rest parameters</a></li>
+        <li><a href="05-arrow-functions.html">arrow functions</a></li>
+        <li><a href="06-promises.html">promises</a></li>
+        <li><a href="07-classes.html">classes</a></li>
+        <li>template literals</li>
+        <li><a href="09-destructuring.html">destructuring</a></li>
+        <li><a href="10-modules.html">modules</a></li>
+      </ol>
+      <div class="contact">
+        Contact: <a href="https://www.twitter.com/hotpizzas">hotpizzas</a>
+      </div>
+    </div>
+  </footer>
 </body>
 <script src="javascript/08_template_literals.js"></script>
 </html>

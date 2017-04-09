@@ -4,7 +4,7 @@
  */
 
 // Basic class
-//ES5
+// ES5
 /* var Food = function(name) {
   this.name = name;
 };
@@ -13,7 +13,7 @@ Food.prototype.describe = function() {
   console.log(this.name + " is the best food.");
 }; */
 
-//ES6 - this is the same as the above.
+// ES6 - this is the same as the above.
 class Food {
   constructor(name) {
     this.name = name;
@@ -42,5 +42,3 @@ class Pizza extends Food {
 
 const myStyle = new Pizza();
 myStyle.toppings("mushrooms and onions");
-
-

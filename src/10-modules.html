@@ -12,45 +12,20 @@
 
 <body class="site">
   <div class="container">
-    <h1>Destructuring</h1>
+    <h1 class="white">Modules</h1>
     <pre class="code">
-      <code>// ES5
-/* var name1 = `Ryan`;
-var name2 = `Rye`;
-var name3 = `Ryerye`; */
+      <code>import { ColorChange } from './modules/colorChange.js';
 
-// ES6
-// Arrays
-/* const [ name1, name2, name3 ] = [ `Ryan`, `Rye`, `Ryerye` ];
-console.log(name1); */
-
-const names = [ `Ryan`, `Rye`, `Ryerye` ];
-const [name1, name2, name3] = names;
-console.log(name2);
-
-// Objects
-/* const superHero = {
-  alias: `Spider-man`,
-  name: `Peter Parker`
-};
-
-const { alias, name } = superHero;
-console.log(alias); */
-
-const superVillain = {
-  alias: `Sandman`,
-  name: `William Baker`,
-  weaknesses: {
-    weakness: `Water`,
-    weakness2: `Planning heists`
+ColorChange.changeColor(`dodgerblue`, document.body);</code>
+</pre>
+<pre class="code">
+  <code>export const ColorChange = {
+  changeColor(color, el) {
+    el.style.backgroundColor = color;
   }
-}
-
-const { alias, weaknesses: { weakness } } = superVillain;
-console.log(alias, weakness);</code>
-    </pre>
-    <a class="button next" href="10-modules.html">Next</a>
-    <p class="source">Source file: <code>./src/javascript/09_destructuring.js</code>
+};</code>
+  </pre>
+    <p class="source white">Source files: <code>./src/javascript/10_modules.js</code>, <code>./src/javascript/modules/colorChange.js</code>
   </div>
   <footer>
     <div class="footer-content">
@@ -65,8 +40,8 @@ console.log(alias, weakness);</code>
         <li><a href="06-promises.html">promises</a></li>
         <li><a href="07-classes.html">classes</a></li>
         <li><a href="08-template-literals.html">template literals</a></li>
-        <li>destructuring</li>
-        <li><a href="10-modules.html">modules</a></li>
+        <li><a href="09-destructuring.html">destructuring</a></li>
+        <li>modules</li>
       </ol>
       <div class="contact">
         Contact: <a href="https://www.twitter.com/hotpizzas">hotpizzas</a>
@@ -74,5 +49,5 @@ console.log(alias, weakness);</code>
     </div>
   </footer>
 </body>
-<script src="javascript/09_destructuring.js"></script>
+<script src="javascript/bundle.js"></script>
 </html>
