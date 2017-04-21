@@ -15,13 +15,14 @@ const webpack = require('gulp-webpack');
 
 gulp.task(`serve`, function() {
   browserSync.init({
-    server: `./dist/`
+    server: `./dist/`,
+    reloadDelay: 500
   });
 });
 
 gulp.task(`watch`, () => {
   gulp.watch(`./src/css/*.css`, [`css`]).on(`change`, browserSync.reload);
-  gulp.watch(`./src/javascript/*.js`, [`js`]).on(`change`, browserSync.reload);
+  gulp.watch(`./src/javascript/*.js`, [`js`, `js-modules`]).on(`change`, browserSync.reload);
   gulp.watch(`./src/*.html`, [`html`]).on(`change`, browserSync.reload);
 });
 
@@ -37,8 +38,16 @@ gulp.task(`js`, () => {
     .pipe(babel({
       presets: [`es2015`]
     }))
-    .pipe(webpack( require(`./webpack.config.js`) ))
     .pipe(sourcemaps.write())
+    .pipe(gulp.dest(`./dist/javascript`));
+});
+
+gulp.task(`js-modules`, () => {
+  return gulp.src(`./src/javascript/**/*.js`)
+    .pipe(babel({
+      presets: [`es2015`]
+    }))
+    .pipe(webpack( require(`./webpack.config.js`) ))
     .pipe(gulp.dest(`./dist/javascript`));
 });
 
@@ -48,4 +57,4 @@ gulp.task(`html`, () => {
 });
 
 // Default Gulp task.
-gulp.task(`default`, [`css`, `js`, `html`, `serve`, `watch`]);
+gulp.task(`default`, [`css`, `js`, `js-modules`, `html`, `serve`, `watch`]);

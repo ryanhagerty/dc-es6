@@ -10,12 +10,14 @@ var name3 = `Ryerye`; */
 
 // ES6
 // Arrays
-/* const [ name1, name2, name3 ] = [ `Ryan`, `Rye`, `Ryerye` ];
-console.log(name1); */
+// const [ name1, name2, name3 ] = [ `Ryan`, `Rye`, `Ryerye` ];
+// console.log(name2);
+// Rye
 
 const names = [ `Ryan`, `Rye`, `Ryerye` ];
 const [name1, name2, name3] = names;
 console.log(name2);
+// Rye
 
 // Objects
 /* const superHero = {
@@ -24,7 +26,8 @@ console.log(name2);
 };
 
 const { alias, name } = superHero;
-console.log(alias); */
+console.log(alias);
+// Spider-man */
 
 const superVillain = {
   alias: `Sandman`,
@@ -37,3 +40,4 @@ const superVillain = {
 
 const { alias, weaknesses: { weakness } } = superVillain;
 console.log(alias, weakness);
+// Sandman Water

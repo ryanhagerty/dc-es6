@@ -22,15 +22,15 @@ const yourPromise = new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve("Your data!");
     }, 1000);
-  }
-  else {
-    reject("It's down.")
+  } else {
+    reject("It's down.");
   }
 });
 
 yourPromise.then((message) => {
   console.log("What did I get? " + message);
-}, (err) => {
+  // What did I get? Your data!
+}, function (err) {
   console.log("Oh no! " + err);
 });
 
@@ -45,24 +45,23 @@ const errorFunction = () => {
 };
 
 newPromise.then((result) => {
-  const newResult = result * 2;
+  const newResult = result * 2; // 4
   return newResult;
-}).catch(errorFunction)
-  .then((result) => {
-    const newResult = result * 2;
-    console.log(newResult);
+  //return Promise.reject();
+}).catch(errorFunction).then((result) => {
+  const newResult = result * 2; // 8
+  console.log(newResult);
 });
-
-// Immediately resolved
-const hunger = "pizza!";
-const promise = Promise.resolve(hunger);
 
 // Promise all
 const apis = ['site1', 'site2', 'site3'];
 
-Promise.all(apis).then((results) => {
+Promise.all(apis).then(function (results) {
   results.forEach((api) => {
     console.log(api);
+    // site1
+    // site2
+    // site3
   });
 });</code>
     </pre>

@@ -17,5 +17,5 @@ function logNumbers(...numbers) {
   console.log(numbers.length);
 }
 
-logNumbers(1);
-logNumbers(1,2,3,4);
+logNumbers(1); // 1
+logNumbers(1,2,3,4); // 4

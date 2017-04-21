@@ -31,4 +31,4 @@ const person = {
 
 person.name = "Ryerye";
 
-console.log(person.name);
+console.log(person.name); // Ryerye
