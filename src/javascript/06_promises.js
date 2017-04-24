@@ -45,7 +45,7 @@ newPromise.then((result) => {
 // Promise all
 const apis = ['site1', 'site2', 'site3'];
 
-Promise.all(apis).then(function (results) {
+Promise.all(apis).then((results) => {
   results.forEach((api) => {
     console.log(api);
     // site1
