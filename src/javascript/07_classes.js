@@ -51,4 +51,4 @@ class Pizza extends Food {
 const myStyle = new Pizza();
 myStyle.toppings("mushrooms and onions");
 // Pizza is the best food.
-// I like mush and onions on mine.
+// I like mushrooms and onions on mine.
